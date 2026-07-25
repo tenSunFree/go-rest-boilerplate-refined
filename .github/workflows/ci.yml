@@ -15,6 +15,13 @@ concurrency:
   group: go-ci-${{ github.ref }}
   cancel-in-progress: true
 
+# Least-privilege default: workflow only needs to read repo contents
+# to checkout code, run tests, and build binaries. Individual jobs can
+# still override this with a narrower/broader `permissions` block if
+# a future step genuinely needs more (e.g. writing PR comments).
+permissions:
+  contents: read
+
 jobs:
   # Format / Static Analysis / Unit Testing / Coverage / Build
   ci:

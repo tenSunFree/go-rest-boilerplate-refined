@@ -1,6 +1,6 @@
 # luma-lang-go
 
-![CI](https://github.com/tenSunFree/rest-boilerplate-refined-go/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/tenSunFree/luma-lang-go/actions/workflows/ci.yml/badge.svg)
 [![Go](https://img.shields.io/badge/Go-1.25.0-00ADD8?logo=go&logoColor=white)](https://go.dev)
 [![Gin](https://img.shields.io/badge/Framework-Gin-00ACD7)](https://gin-gonic.com)
 [![Architecture](https://img.shields.io/badge/Architecture-Clean-4CAF50)](#architecture)
@@ -216,11 +216,19 @@ make test-integration
 
 **End-to-end tests** — cover registration, OTP verification, login, refresh-token rotation/revocation, logout, password change/reset, and brute-force lockout behavior
 
-**Local quality checks** — mirrors CI: formatting, static analysis, linting, unit/integration tests, dependency consistency, migration validation, Swagger drift, and build
+**Local quality checks** — runs formatting, static analysis, linting, unit tests, dependency consistency, migration validation, Swagger drift detection, and build checks.
 
 ```bash
 bash scripts/check.sh
 ```
+
+**Local integration checks** — runs tests tagged `integration` against real PostgreSQL and Redis via Testcontainers. Docker must be running locally.
+
+```bash
+bash scripts/check-integration.sh
+```
+
+**Coverage reporting** — the CI unit-test job generates a Go coverage report and uploads it to [Codecov](https://codecov.io) for pushes to `main`/`develop` and for Pull Requests targeting those branches. Uploads use the repository's `CODECOV_TOKEN` GitHub Actions secret. The current report includes unit-test coverage only; coverage from the Testcontainers integration-test job is not yet merged into it. The `codecov/project` and `codecov/patch` checks are currently informational and are not yet configured as required branch-protection checks.
 
 ---
 
@@ -244,8 +252,8 @@ Do not commit the real `.env` file or production credentials to version control.
 ## Local Development
 
 ```bash
-git clone https://github.com/tenSunFree/rest-boilerplate-refined-go.git
-cd rest-boilerplate-refined-go
+git clone https://github.com/tenSunFree/luma-lang-go.git
+cd luma-lang-go
 ```
 
 **Start with Docker Compose** (API + PostgreSQL + Redis):
