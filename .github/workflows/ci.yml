@@ -7,6 +7,7 @@ on:
       - '**.md'
       - 'docs/**'
       - '.gitignore'
+
   pull_request:
     branches: [ main, develop ]
 
@@ -14,8 +15,15 @@ concurrency:
   group: go-ci-${{ github.ref }}
   cancel-in-progress: true
 
+# Least-privilege default: workflow only needs to read repo contents
+# to checkout code, run tests, and build binaries. Individual jobs can
+# still override this with a narrower/broader `permissions` block if
+# a future step genuinely needs more (e.g. writing PR comments).
+permissions:
+  contents: read
+
 jobs:
-  # Format / Static Analysis / Unit Testing / Build
+  # Format / Static Analysis / Unit Testing / Coverage / Build
   ci:
     name: Format, Vet, Lint, Test & Build
     runs-on: ubuntu-latest
@@ -27,8 +35,8 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version-file: go.mod   # Automatically read the go version of go.mod (currently 1.25.0)
-          cache: true               # Cache $GOPATH/pkg/mod to speed up module downloads
+          go-version-file: go.mod
+          cache: true
 
       - name: Show Go version
         run: go version
@@ -36,10 +44,10 @@ jobs:
       - name: Download dependencies
         run: go mod download
 
-      - name: Verify dependencies          # Confirm that go.sum matches the actual downloaded module.
+      - name: Verify dependencies
         run: go mod verify
 
-      # gofmt -l Lists unformatted files; exit if output is available.
+      # gofmt -l lists unformatted files; exit if output is available.
       - name: Check Go format
         run: |
           unformatted=$(gofmt -l .)
@@ -50,40 +58,52 @@ jobs:
           fi
           echo "所有檔案格式正確"
 
-      # go vet is an officially built-in static analysis tool; it's low-cost and should be retained indefinitely.
+      # go vet is an officially built-in static analysis tool.
       - name: Go vet
         run: go vet ./...
 
-      # Configure the `.golangci.yml` file in the corresponding project root directory for golangci-lint
-      # Pin the version to prevent CI from failing unexpectedly due to lint tool upgrades
+      # Pin golangci-lint to prevent unexpected CI failures from upgrades.
       - name: Static analysis (golangci-lint)
         uses: golangci/golangci-lint-action@v7
         with:
           version: v2.12.2
 
-      # Unit tests: Run quick mock-based tests without `-tags=integration`
-      # `-race` → Detect data races (a powerful feature specific to Go)
-      # `-count=1` → Disable test caching, ensuring that tests are actually executed every time.
-      - name: Run unit tests
-        run: go test -v -race -count=1 ./...
+      # Unit tests + coverage.
+      # `-covermode=atomic` is required when combined with `-race`.
+      - name: Run unit tests with coverage
+        run: |
+          go test \
+            -v \
+            -race \
+            -count=1 \
+            -covermode=atomic \
+            -coverprofile=coverage.out \
+            ./...
 
-      # Build API server binary (corresponding to `go build ./cmd/api` in the Dockerfile)
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage.out
+          flags: unittests
+          fail_ci_if_error: false
+
+      # Build API server binary.
       - name: Build API binary
         run: |
           CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" \
             -o bin/api ./cmd/api
 
-      # Build migration binary (the project has its own migration CLI)
+      # Build migration binary.
       - name: Build migration binary
         run: |
           CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" \
             -o bin/migrate ./cmd/migration
 
-  # Integration Testing (Requires Docker, spin-up a real Postgres + Redis)
-  # Corresponds to the test files marked with //go:build integration in the project
+  # Integration Testing (Requires Docker, spins up real Postgres + Redis)
   integration-test:
     name: Integration Tests (Testcontainers)
-    runs-on: ubuntu-latest          # GitHub Actions runner with built-in Docker
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout source code
@@ -98,7 +118,12 @@ jobs:
       - name: Download dependencies
         run: go mod download
 
-      # Testcontainers-go will automatically pull the image and start the container
-      # No need to manually run `docker run` here
       - name: Run integration tests
-        run: go test -v -race -count=1 -tags=integration -timeout=120s ./...
+        run: |
+          go test \
+            -v \
+            -race \
+            -count=1 \
+            -tags=integration \
+            -timeout=120s \
+            ./...
