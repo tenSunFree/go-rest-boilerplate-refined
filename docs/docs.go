@@ -9,7 +9,7 @@ const docTemplate = `{
     "info": {
         "description": "{{escape .Description}}",
         "title": "{{.Title}}",
-        "termsOfService": "https://github.com/snykk/go-rest-boilerplate",
+        "termsOfService": "https://github.com/tenSunFree/luma-lang-go",
         "contact": {
             "name": "Najib Fikri",
             "url": "mailto:najibfikri26@gmail.com"
@@ -43,7 +43,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.LoginRequest"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.LoginRequest"
                         }
                     }
                 ],
@@ -53,13 +53,13 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                                    "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                                 },
                                 {
                                     "type": "object",
                                     "properties": {
                                         "data": {
-                                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_responses.UserResponse"
+                                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_responses.UserResponse"
                                         }
                                     }
                                 }
@@ -69,25 +69,25 @@ const docTemplate = `{
                     "400": {
                         "description": "Malformed JSON body",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "401": {
                         "description": "Invalid email or password",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "403": {
                         "description": "Account not yet activated",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "422": {
                         "description": "Validation error",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -113,7 +113,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.RefreshRequest"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.RefreshRequest"
                         }
                     }
                 ],
@@ -121,19 +121,19 @@ const docTemplate = `{
                     "200": {
                         "description": "Logged out",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "401": {
                         "description": "Refresh token invalid",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "422": {
                         "description": "Validation error",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -164,7 +164,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.ChangePasswordRequest"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.ChangePasswordRequest"
                         }
                     }
                 ],
@@ -172,25 +172,25 @@ const docTemplate = `{
                     "200": {
                         "description": "Password changed",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "400": {
                         "description": "Malformed JSON body",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "401": {
                         "description": "Current password incorrect",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "422": {
                         "description": "Validation error",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -216,7 +216,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.ForgotPasswordRequest"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.ForgotPasswordRequest"
                         }
                     }
                 ],
@@ -224,19 +224,19 @@ const docTemplate = `{
                     "200": {
                         "description": "Reset code queued (or email not registered — same response either way)",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "400": {
                         "description": "Malformed JSON body",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "422": {
                         "description": "Validation error",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -262,7 +262,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.ResetPasswordRequest"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.ResetPasswordRequest"
                         }
                     }
                 ],
@@ -270,31 +270,31 @@ const docTemplate = `{
                     "200": {
                         "description": "Password reset",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "400": {
                         "description": "Malformed request",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "401": {
                         "description": "Reset code invalid or expired",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "403": {
                         "description": "Too many invalid attempts",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "422": {
                         "description": "Validation error",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -320,7 +320,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.RefreshRequest"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.RefreshRequest"
                         }
                     }
                 ],
@@ -330,13 +330,13 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                                    "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                                 },
                                 {
                                     "type": "object",
                                     "properties": {
                                         "data": {
-                                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_responses.UserResponse"
+                                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_responses.UserResponse"
                                         }
                                     }
                                 }
@@ -346,19 +346,19 @@ const docTemplate = `{
                     "401": {
                         "description": "Refresh token invalid, expired, or already revoked",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "403": {
                         "description": "Account no longer active",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "422": {
                         "description": "Validation error",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -384,7 +384,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.RegisterRequest"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.RegisterRequest"
                         }
                     }
                 ],
@@ -394,13 +394,13 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                                    "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                                 },
                                 {
                                     "type": "object",
                                     "properties": {
                                         "data": {
-                                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_responses.UserResponse"
+                                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_responses.UserResponse"
                                         }
                                     }
                                 }
@@ -410,25 +410,25 @@ const docTemplate = `{
                     "400": {
                         "description": "Malformed JSON body",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "409": {
                         "description": "Email or username already in use",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "422": {
                         "description": "Validation error (per-field detail in data.errors)",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "500": {
                         "description": "Internal error",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -454,7 +454,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.SendOTPRequest"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.SendOTPRequest"
                         }
                     }
                 ],
@@ -462,31 +462,31 @@ const docTemplate = `{
                     "200": {
                         "description": "OTP enqueued",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "400": {
                         "description": "Account already activated",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "404": {
                         "description": "Email not registered",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "422": {
                         "description": "Validation error",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "500": {
                         "description": "Failed to enqueue mail",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -512,7 +512,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.VerifyOTPRequest"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.VerifyOTPRequest"
                         }
                     }
                 ],
@@ -520,31 +520,31 @@ const docTemplate = `{
                     "200": {
                         "description": "Account activated",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "400": {
                         "description": "Invalid OTP code",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "403": {
                         "description": "Locked out — too many invalid attempts",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "404": {
                         "description": "Email not registered",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "422": {
                         "description": "Validation error",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -584,7 +584,7 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -631,13 +631,13 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "400": {
                         "description": "q is required",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -666,13 +666,13 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "404": {
                         "description": "Not Found",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -707,7 +707,7 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                                    "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                                 },
                                 {
                                     "type": "object",
@@ -718,7 +718,7 @@ const docTemplate = `{
                                                 "data": {
                                                     "type": "array",
                                                     "items": {
-                                                        "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_responses.LiveCourseResponse"
+                                                        "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_responses.LiveCourseResponse"
                                                     }
                                                 }
                                             }
@@ -731,7 +731,7 @@ const docTemplate = `{
                     "401": {
                         "description": "Unauthorized",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -768,7 +768,7 @@ const docTemplate = `{
                         "name": "request",
                         "in": "body",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.JoinLiveRequest"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.JoinLiveRequest"
                         }
                     }
                 ],
@@ -778,7 +778,7 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                                    "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                                 },
                                 {
                                     "type": "object",
@@ -817,25 +817,25 @@ const docTemplate = `{
                     "400": {
                         "description": "Malformed JSON",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "401": {
                         "description": "Unauthorized",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "403": {
                         "description": "Live not started yet",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "404": {
                         "description": "Live not found",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -873,7 +873,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.LeaveLiveRequest"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.LeaveLiveRequest"
                         }
                     }
                 ],
@@ -883,7 +883,7 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                                    "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                                 },
                                 {
                                     "type": "object",
@@ -904,13 +904,13 @@ const docTemplate = `{
                     "400": {
                         "description": "Missing uid",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "401": {
                         "description": "Unauthorized",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -946,7 +946,7 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                                    "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                                 },
                                 {
                                     "type": "object",
@@ -973,13 +973,13 @@ const docTemplate = `{
                     "401": {
                         "description": "Unauthorized",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "404": {
                         "description": "Live not found",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -1015,7 +1015,7 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                                    "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                                 },
                                 {
                                     "type": "object",
@@ -1039,13 +1039,13 @@ const docTemplate = `{
                     "401": {
                         "description": "Unauthorized",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "404": {
                         "description": "Live not found",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -1079,7 +1079,7 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                                    "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                                 },
                                 {
                                     "type": "object",
@@ -1103,13 +1103,13 @@ const docTemplate = `{
                     "401": {
                         "description": "Unauthorized",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "404": {
                         "description": "Live not found",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -1147,7 +1147,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.RenewTokenRequest"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.RenewTokenRequest"
                         }
                     }
                 ],
@@ -1157,7 +1157,7 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                                    "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                                 },
                                 {
                                     "type": "object",
@@ -1184,19 +1184,19 @@ const docTemplate = `{
                     "400": {
                         "description": "Missing uid",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "401": {
                         "description": "Unauthorized",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "404": {
                         "description": "Live not found",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -1223,7 +1223,7 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                                    "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                                 },
                                 {
                                     "type": "object",
@@ -1244,13 +1244,13 @@ const docTemplate = `{
                     "401": {
                         "description": "Unauthorized",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "404": {
                         "description": "No active live found",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -1281,7 +1281,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.StartTeacherLiveRequest"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.StartTeacherLiveRequest"
                         }
                     }
                 ],
@@ -1291,7 +1291,7 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                                    "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                                 },
                                 {
                                     "type": "object",
@@ -1321,13 +1321,13 @@ const docTemplate = `{
                     "400": {
                         "description": "Missing required fields",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "401": {
                         "description": "Unauthorized",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -1354,13 +1354,13 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                                    "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                                 },
                                 {
                                     "type": "object",
                                     "properties": {
                                         "data": {
-                                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_responses.UserResponse"
+                                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_responses.UserResponse"
                                         }
                                     }
                                 }
@@ -1370,13 +1370,13 @@ const docTemplate = `{
                     "401": {
                         "description": "Missing or invalid token",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     },
                     "404": {
                         "description": "User no longer exists",
                         "schema": {
-                            "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse"
+                            "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse"
                         }
                     }
                 }
@@ -1384,7 +1384,7 @@ const docTemplate = `{
         }
     },
     "definitions": {
-        "github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.ChangePasswordRequest": {
+        "github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.ChangePasswordRequest": {
             "type": "object",
             "required": [
                 "current_password",
@@ -1403,7 +1403,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.ForgotPasswordRequest": {
+        "github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.ForgotPasswordRequest": {
             "type": "object",
             "required": [
                 "email"
@@ -1415,7 +1415,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.JoinLiveRequest": {
+        "github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.JoinLiveRequest": {
             "type": "object",
             "properties": {
                 "clientType": {
@@ -1424,7 +1424,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.LeaveLiveRequest": {
+        "github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.LeaveLiveRequest": {
             "type": "object",
             "required": [
                 "uid"
@@ -1436,7 +1436,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.LoginRequest": {
+        "github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.LoginRequest": {
             "type": "object",
             "required": [
                 "email",
@@ -1454,7 +1454,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.RefreshRequest": {
+        "github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.RefreshRequest": {
             "type": "object",
             "required": [
                 "refresh_token"
@@ -1465,7 +1465,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.RegisterRequest": {
+        "github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.RegisterRequest": {
             "type": "object",
             "required": [
                 "email",
@@ -1508,7 +1508,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.RenewTokenRequest": {
+        "github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.RenewTokenRequest": {
             "type": "object",
             "required": [
                 "uid"
@@ -1520,7 +1520,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.ResetPasswordRequest": {
+        "github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.ResetPasswordRequest": {
             "type": "object",
             "required": [
                 "code",
@@ -1542,7 +1542,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.SendOTPRequest": {
+        "github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.SendOTPRequest": {
             "type": "object",
             "required": [
                 "email"
@@ -1554,7 +1554,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.StartTeacherLiveRequest": {
+        "github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.StartTeacherLiveRequest": {
             "type": "object",
             "required": [
                 "title"
@@ -1586,7 +1586,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_requests.VerifyOTPRequest": {
+        "github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_requests.VerifyOTPRequest": {
             "type": "object",
             "required": [
                 "code",
@@ -1602,7 +1602,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_responses.LiveCourseResponse": {
+        "github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_responses.LiveCourseResponse": {
             "type": "object",
             "properties": {
                 "canJoin": {
@@ -1649,7 +1649,7 @@ const docTemplate = `{
                     "example": "scheduled"
                 },
                 "teacher": {
-                    "$ref": "#/definitions/github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_responses.TeacherResponse"
+                    "$ref": "#/definitions/github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_responses.TeacherResponse"
                 },
                 "textbookUrl": {
                     "type": "string",
@@ -1669,7 +1669,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_responses.TeacherResponse": {
+        "github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_responses.TeacherResponse": {
             "type": "object",
             "properties": {
                 "avatarUrl": {
@@ -1686,7 +1686,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_snykk_go-rest-boilerplate_internal_http_datatransfers_responses.UserResponse": {
+        "github_com_tenSunFree_luma-lang-go_internal_http_datatransfers_responses.UserResponse": {
             "type": "object",
             "properties": {
                 "created_at": {
@@ -1724,7 +1724,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_snykk_go-rest-boilerplate_internal_http_handlers_v1.BaseResponse": {
+        "github_com_tenSunFree_luma-lang-go_internal_http_handlers_v1.BaseResponse": {
             "type": "object",
             "properties": {
                 "data": {},

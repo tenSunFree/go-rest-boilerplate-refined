@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/snykk/go-rest-boilerplate/internal/apperror"
+	"github.com/tenSunFree/luma-lang-go/internal/apperror"
 )
 
 type usecase struct {

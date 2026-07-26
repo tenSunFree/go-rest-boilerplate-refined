@@ -4,10 +4,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/snykk/go-rest-boilerplate/internal/business/domain"
-	"github.com/snykk/go-rest-boilerplate/internal/business/usecases/auth"
-	"github.com/snykk/go-rest-boilerplate/internal/test/mocks"
-	"github.com/snykk/go-rest-boilerplate/pkg/helpers"
+	"github.com/tenSunFree/luma-lang-go/internal/business/domain"
+	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/auth"
+	"github.com/tenSunFree/luma-lang-go/internal/test/mocks"
+	"github.com/tenSunFree/luma-lang-go/pkg/helpers"
 	"golang.org/x/crypto/bcrypt"
 )
 

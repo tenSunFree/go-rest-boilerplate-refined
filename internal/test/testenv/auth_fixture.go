@@ -7,12 +7,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/snykk/go-rest-boilerplate/internal/business/usecases/auth"
-	"github.com/snykk/go-rest-boilerplate/internal/business/usecases/users"
-	"github.com/snykk/go-rest-boilerplate/internal/config"
-	"github.com/snykk/go-rest-boilerplate/internal/datasources/caches"
-	userspostgres "github.com/snykk/go-rest-boilerplate/internal/datasources/repositories/postgres/users"
-	"github.com/snykk/go-rest-boilerplate/pkg/jwt"
+	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/auth"
+	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/users"
+	"github.com/tenSunFree/luma-lang-go/internal/config"
+	"github.com/tenSunFree/luma-lang-go/internal/datasources/caches"
+	userspostgres "github.com/tenSunFree/luma-lang-go/internal/datasources/repositories/postgres/users"
+	"github.com/tenSunFree/luma-lang-go/pkg/jwt"
 	"github.com/stretchr/testify/require"
 )
 

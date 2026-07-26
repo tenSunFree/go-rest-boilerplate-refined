@@ -1,7 +1,7 @@
 package seeders
 
 import (
-	"github.com/snykk/go-rest-boilerplate/pkg/helpers"
+	"github.com/tenSunFree/luma-lang-go/pkg/helpers"
 )
 
 const LiveTeacherEmail = "teacher_ben@gmail.com"

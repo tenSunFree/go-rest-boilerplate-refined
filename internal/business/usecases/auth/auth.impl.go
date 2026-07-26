@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/snykk/go-rest-boilerplate/internal/business/usecases/users"
-	"github.com/snykk/go-rest-boilerplate/internal/datasources/caches"
-	"github.com/snykk/go-rest-boilerplate/pkg/jwt"
-	"github.com/snykk/go-rest-boilerplate/pkg/mailer"
+	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/users"
+	"github.com/tenSunFree/luma-lang-go/internal/datasources/caches"
+	"github.com/tenSunFree/luma-lang-go/pkg/jwt"
+	"github.com/tenSunFree/luma-lang-go/pkg/mailer"
 )
 
 // usecase carries the dependencies and any cross-method state. Each

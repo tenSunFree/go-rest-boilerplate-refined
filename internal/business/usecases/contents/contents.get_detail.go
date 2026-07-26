@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/snykk/go-rest-boilerplate/internal/apperror"
-	"github.com/snykk/go-rest-boilerplate/internal/http/datatransfers/responses"
+	"github.com/tenSunFree/luma-lang-go/internal/apperror"
+	"github.com/tenSunFree/luma-lang-go/internal/http/datatransfers/responses"
 )
 
 func (uc *usecase) GetDetail(ctx context.Context, id string) (responses.ContentDetailResponse, error) {

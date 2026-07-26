@@ -3,8 +3,8 @@ package postgres
 import (
 	"context"
 
-	"github.com/snykk/go-rest-boilerplate/internal/datasources/records"
-	"github.com/snykk/go-rest-boilerplate/pkg/logger"
+	"github.com/tenSunFree/luma-lang-go/internal/datasources/records"
+	"github.com/tenSunFree/luma-lang-go/pkg/logger"
 )
 
 func (r *postgreLessonRepository) List(ctx context.Context) ([]records.Lesson, error) {

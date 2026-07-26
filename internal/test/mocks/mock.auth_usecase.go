@@ -8,7 +8,7 @@ package mocks
 import (
 	"context"
 
-	"github.com/snykk/go-rest-boilerplate/internal/business/usecases/auth"
+	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/auth"
 	mock "github.com/stretchr/testify/mock"
 )
 

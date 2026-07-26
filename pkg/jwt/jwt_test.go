@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/snykk/go-rest-boilerplate/pkg/clock"
-	"github.com/snykk/go-rest-boilerplate/pkg/jwt"
+	"github.com/tenSunFree/luma-lang-go/pkg/clock"
+	"github.com/tenSunFree/luma-lang-go/pkg/jwt"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

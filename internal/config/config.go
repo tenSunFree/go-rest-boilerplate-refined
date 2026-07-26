@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/snykk/go-rest-boilerplate/internal/constants"
+	"github.com/tenSunFree/luma-lang-go/internal/constants"
 	"github.com/spf13/viper"
 )
 

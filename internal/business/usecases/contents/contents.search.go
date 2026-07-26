@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/snykk/go-rest-boilerplate/internal/apperror"
-	repointerface "github.com/snykk/go-rest-boilerplate/internal/datasources/repositories/interface"
-	"github.com/snykk/go-rest-boilerplate/internal/http/datatransfers/responses"
+	"github.com/tenSunFree/luma-lang-go/internal/apperror"
+	repointerface "github.com/tenSunFree/luma-lang-go/internal/datasources/repositories/interface"
+	"github.com/tenSunFree/luma-lang-go/internal/http/datatransfers/responses"
 )
 
 func (uc *usecase) Search(ctx context.Context, req SearchRequest) (ListResult, error) {

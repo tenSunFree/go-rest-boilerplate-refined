@@ -6,9 +6,9 @@ import (
 	"testing"
 
 	golangJWT "github.com/golang-jwt/jwt/v5"
-	"github.com/snykk/go-rest-boilerplate/internal/apperror"
-	"github.com/snykk/go-rest-boilerplate/internal/business/usecases/auth"
-	"github.com/snykk/go-rest-boilerplate/pkg/jwt"
+	"github.com/tenSunFree/luma-lang-go/internal/apperror"
+	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/auth"
+	"github.com/tenSunFree/luma-lang-go/pkg/jwt"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"

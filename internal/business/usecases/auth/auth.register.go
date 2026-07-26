@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/snykk/go-rest-boilerplate/internal/business/usecases/users"
-	"github.com/snykk/go-rest-boilerplate/pkg/logger"
+	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/users"
+	"github.com/tenSunFree/luma-lang-go/pkg/logger"
 )
 
 // Register creates a fresh, inactive user account. The user must

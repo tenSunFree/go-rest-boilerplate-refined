@@ -2,8 +2,8 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	contentsuc "github.com/snykk/go-rest-boilerplate/internal/business/usecases/contents"
-	contentshandler "github.com/snykk/go-rest-boilerplate/internal/http/handlers/v1/contents"
+	contentsuc "github.com/tenSunFree/luma-lang-go/internal/business/usecases/contents"
+	contentshandler "github.com/tenSunFree/luma-lang-go/internal/http/handlers/v1/contents"
 )
 
 type contentsRoute struct {

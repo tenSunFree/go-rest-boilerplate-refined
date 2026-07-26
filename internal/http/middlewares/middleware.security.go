@@ -4,8 +4,8 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/snykk/go-rest-boilerplate/internal/config"
-	"github.com/snykk/go-rest-boilerplate/internal/constants"
+	"github.com/tenSunFree/luma-lang-go/internal/config"
+	"github.com/tenSunFree/luma-lang-go/internal/constants"
 )
 
 // SecurityHeadersMiddleware sets a small but high-leverage set of

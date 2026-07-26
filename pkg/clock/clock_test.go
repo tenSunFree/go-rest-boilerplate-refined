@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/snykk/go-rest-boilerplate/pkg/clock"
+	"github.com/tenSunFree/luma-lang-go/pkg/clock"
 	"github.com/stretchr/testify/assert"
 )
 

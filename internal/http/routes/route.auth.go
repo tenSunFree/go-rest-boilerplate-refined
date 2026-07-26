@@ -2,9 +2,9 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/snykk/go-rest-boilerplate/internal/business/usecases/auth"
-	authhandler "github.com/snykk/go-rest-boilerplate/internal/http/handlers/v1/auth"
-	"github.com/snykk/go-rest-boilerplate/internal/http/middlewares"
+	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/auth"
+	authhandler "github.com/tenSunFree/luma-lang-go/internal/http/handlers/v1/auth"
+	"github.com/tenSunFree/luma-lang-go/internal/http/middlewares"
 	"golang.org/x/time/rate"
 )
 

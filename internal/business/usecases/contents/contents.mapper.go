@@ -3,8 +3,8 @@ package contents
 import (
 	"encoding/json"
 
-	"github.com/snykk/go-rest-boilerplate/internal/datasources/records"
-	"github.com/snykk/go-rest-boilerplate/internal/http/datatransfers/responses"
+	"github.com/tenSunFree/luma-lang-go/internal/datasources/records"
+	"github.com/tenSunFree/luma-lang-go/internal/http/datatransfers/responses"
 )
 
 func toListItem(r records.Content) responses.ContentListItemResponse {

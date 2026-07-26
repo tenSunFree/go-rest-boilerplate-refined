@@ -3,7 +3,7 @@ package responses
 import (
 	"time"
 
-	livesuc "github.com/snykk/go-rest-boilerplate/internal/business/usecases/lives"
+	livesuc "github.com/tenSunFree/luma-lang-go/internal/business/usecases/lives"
 )
 
 // LiveCourseResponse is the item returned by GET /live-courses.

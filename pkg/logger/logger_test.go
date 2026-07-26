@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/snykk/go-rest-boilerplate/pkg/logger"
+	"github.com/tenSunFree/luma-lang-go/pkg/logger"
 )
 
 func TestLoggerUsage(t *testing.T) {

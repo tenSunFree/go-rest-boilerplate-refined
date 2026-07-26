@@ -5,11 +5,11 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	livesuc "github.com/snykk/go-rest-boilerplate/internal/business/usecases/lives"
-	httpauth "github.com/snykk/go-rest-boilerplate/internal/http/auth"
-	"github.com/snykk/go-rest-boilerplate/internal/http/datatransfers/requests"
-	"github.com/snykk/go-rest-boilerplate/internal/http/datatransfers/responses"
-	v1 "github.com/snykk/go-rest-boilerplate/internal/http/handlers/v1"
+	livesuc "github.com/tenSunFree/luma-lang-go/internal/business/usecases/lives"
+	httpauth "github.com/tenSunFree/luma-lang-go/internal/http/auth"
+	"github.com/tenSunFree/luma-lang-go/internal/http/datatransfers/requests"
+	"github.com/tenSunFree/luma-lang-go/internal/http/datatransfers/responses"
+	v1 "github.com/tenSunFree/luma-lang-go/internal/http/handlers/v1"
 )
 
 type Handler struct {

@@ -5,13 +5,13 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/snykk/go-rest-boilerplate/internal/apperror"
-	authuc "github.com/snykk/go-rest-boilerplate/internal/business/usecases/auth"
-	"github.com/snykk/go-rest-boilerplate/internal/http/datatransfers/requests"
-	v1 "github.com/snykk/go-rest-boilerplate/internal/http/handlers/v1"
-	"github.com/snykk/go-rest-boilerplate/pkg/audit"
-	"github.com/snykk/go-rest-boilerplate/pkg/logger"
-	"github.com/snykk/go-rest-boilerplate/pkg/validators"
+	"github.com/tenSunFree/luma-lang-go/internal/apperror"
+	authuc "github.com/tenSunFree/luma-lang-go/internal/business/usecases/auth"
+	"github.com/tenSunFree/luma-lang-go/internal/http/datatransfers/requests"
+	v1 "github.com/tenSunFree/luma-lang-go/internal/http/handlers/v1"
+	"github.com/tenSunFree/luma-lang-go/pkg/audit"
+	"github.com/tenSunFree/luma-lang-go/pkg/logger"
+	"github.com/tenSunFree/luma-lang-go/pkg/validators"
 )
 
 // VerifyOTP godoc
