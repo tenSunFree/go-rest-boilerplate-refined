@@ -29,8 +29,13 @@ swag: ## Regenerate OpenAPI spec (docs/) from godoc annotations (requires: go in
 	$(GOPATH)/bin/swag init -g cmd/api/main.go --output docs --parseDependency --parseInternal
 
 test-cover: ## Run tests with coverage report
-	go test -coverprofile=coverage.out ./...
-	go tool cover -html=coverage.out -o coverage.html
+	mkdir -p coverage/html
+	go test -coverprofile=coverage/coverage.out ./...
+	go tool cover -html=coverage/coverage.out -o coverage/html/index.html
+
+ci-test: ## Run unit tests with race + coverage matching CI
+	mkdir -p coverage
+	go test -race -coverprofile=coverage/coverage.out ./...
 
 mock: ## Generate mock for an interface (usage: make mock interface=Name dir=path filename=mock.name.go)
 	@echo "Generating mocks for interface $(interface) in directory $(dir)..."

@@ -1,6 +1,7 @@
 # luma-lang-go
 
 ![CI](https://github.com/tenSunFree/luma-lang-go/actions/workflows/ci.yml/badge.svg)
+[![codecov](https://codecov.io/gh/tenSunFree/luma-lang-go/graph/badge.svg)](https://codecov.io/gh/tenSunFree/luma-lang-go)
 [![Go](https://img.shields.io/badge/Go-1.25.0-00ADD8?logo=go&logoColor=white)](https://go.dev)
 [![Gin](https://img.shields.io/badge/Framework-Gin-00ACD7)](https://gin-gonic.com)
 [![Architecture](https://img.shields.io/badge/Architecture-Clean-4CAF50)](#architecture)
@@ -118,6 +119,7 @@ Together, the two repositories demonstrate a full-stack mobile architecture cove
 - Static analysis (`go vet`), linting (`golangci-lint`), and security scanning (`gosec`)
 - Formatting validation with `gofmt` / `goimports`
 - Local scripts that mirror CI checks (`scripts/check.sh`, `scripts/check-integration.sh`)
+- Local coverage tooling that mirrors CI's test invocation and renders a browsable HTML report (`scripts/coverage.sh`)
 - Conventional Pull Request workflow with automated AI-assisted review via CodeRabbit
 
 ---
@@ -230,12 +232,20 @@ bash scripts/check-integration.sh
 
 **Coverage reporting** — the CI unit-test job generates a Go coverage report and uploads it to [Codecov](https://codecov.io) for pushes to `main`/`develop` and for Pull Requests targeting those branches. Uploads use the repository's `CODECOV_TOKEN` GitHub Actions secret. The current report includes unit-test coverage only; coverage from the Testcontainers integration-test job is not yet merged into it. The `codecov/project` and `codecov/patch` checks are currently informational and are not yet configured as required branch-protection checks.
 
+**Local coverage report** — runs the same test invocation as CI (`-race -covermode=atomic`, falling back to a non-race run if a working C compiler/cgo isn't available locally), converts the resulting Go coverage profile to LCOV, and renders a navigable HTML report (per-directory percentages, expandable file tree) before opening it in your default browser.
+
+```bash
+bash scripts/coverage.sh
+```
+
+Requires [`gcov2lcov`](https://github.com/jandelgado/gcov2lcov) plus either `genhtml` (from the `lcov` package) or [`@lcov-viewer/cli`](https://www.npmjs.com/package/@lcov-viewer/cli) to render the tree-view HTML report; falls back to Go's built-in `go tool cover -html` output if neither is available. Set `NO_OPEN=1` to skip auto-opening the browser. Coverage exclusions are maintained solely in `codecov.yml`, so the local report intentionally mirrors CI's raw output rather than filtering separately.
+
 ---
 
 ## Environment
 
 **Required:** Go 1.25.0, Docker, Docker Compose, Git
-**Optional:** `golangci-lint`, `swag` CLI
+**Optional:** `golangci-lint`, `swag` CLI, `gcov2lcov` + `genhtml`/`lcov-viewer` (for local HTML coverage reports)
 
 **Local runtime services:** PostgreSQL 16, Redis 7, API on port `8080`
 
@@ -368,6 +378,7 @@ luma-lang-go
 ├── scripts
 │   ├── check-integration.sh
 │   ├── check.sh
+│   ├── coverage.sh
 │   └── pre-push
 ├── go.mod
 ├── go.sum
