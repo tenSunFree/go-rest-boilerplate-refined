@@ -9,8 +9,8 @@ package mocks
 import (
 	"context"
 
-	"github.com/snykk/go-rest-boilerplate/internal/business/usecases/users"
 	mock "github.com/stretchr/testify/mock"
+	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/users"
 )
 
 // UsersUsecase is the mock for users.Usecase.

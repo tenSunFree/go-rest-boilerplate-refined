@@ -5,9 +5,9 @@ import (
 	"database/sql"
 	"errors"
 
-	"github.com/snykk/go-rest-boilerplate/internal/apperror"
-	"github.com/snykk/go-rest-boilerplate/internal/datasources/records"
-	"github.com/snykk/go-rest-boilerplate/pkg/logger"
+	"github.com/tenSunFree/luma-lang-go/internal/apperror"
+	"github.com/tenSunFree/luma-lang-go/internal/datasources/records"
+	"github.com/tenSunFree/luma-lang-go/pkg/logger"
 )
 
 func (r *postgreContentRepository) GetByID(ctx context.Context, id string) (records.Content, error) {

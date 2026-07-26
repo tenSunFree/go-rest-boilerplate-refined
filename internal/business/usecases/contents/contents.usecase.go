@@ -3,7 +3,7 @@ package contents
 import (
 	"context"
 
-	"github.com/snykk/go-rest-boilerplate/internal/http/datatransfers/responses"
+	"github.com/tenSunFree/luma-lang-go/internal/http/datatransfers/responses"
 )
 
 // ListRequest list request parameters.

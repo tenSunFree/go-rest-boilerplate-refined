@@ -6,10 +6,10 @@ import (
 	"fmt"
 
 	"github.com/lib/pq"
-	"github.com/snykk/go-rest-boilerplate/internal/apperror"
-	"github.com/snykk/go-rest-boilerplate/internal/business/domain"
-	"github.com/snykk/go-rest-boilerplate/internal/datasources/records"
-	"github.com/snykk/go-rest-boilerplate/pkg/logger"
+	"github.com/tenSunFree/luma-lang-go/internal/apperror"
+	"github.com/tenSunFree/luma-lang-go/internal/business/domain"
+	"github.com/tenSunFree/luma-lang-go/internal/datasources/records"
+	"github.com/tenSunFree/luma-lang-go/pkg/logger"
 )
 
 func (r *postgreUserRepository) Store(ctx context.Context, inDom *domain.User) (domain.User, error) {

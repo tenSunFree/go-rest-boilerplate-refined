@@ -1,10 +1,8 @@
 #!/bin/sh
-# .git/hooks/pre-push
+# scripts/hooks/pre-push
 #
 # Runs local CI checks before every push.
-# Install:
-#   cp scripts/pre-push .git/hooks/pre-push
-#   chmod +x .git/hooks/pre-push
+# Install: make install-hooks
 #
 # Note: this always runs check.sh in check-only mode (no --fix),
 # so it will never modify your working directory on its own.

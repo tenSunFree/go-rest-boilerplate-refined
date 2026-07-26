@@ -5,9 +5,9 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
-	contentsuc "github.com/snykk/go-rest-boilerplate/internal/business/usecases/contents"
-	v1 "github.com/snykk/go-rest-boilerplate/internal/http/handlers/v1"
-	"github.com/snykk/go-rest-boilerplate/pkg/logger"
+	contentsuc "github.com/tenSunFree/luma-lang-go/internal/business/usecases/contents"
+	v1 "github.com/tenSunFree/luma-lang-go/internal/http/handlers/v1"
+	"github.com/tenSunFree/luma-lang-go/pkg/logger"
 )
 
 type Handler struct {

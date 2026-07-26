@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/snykk/go-rest-boilerplate/internal/datasources/caches"
+	"github.com/tenSunFree/luma-lang-go/internal/datasources/caches"
 	"github.com/testcontainers/testcontainers-go"
 	tcredis "github.com/testcontainers/testcontainers-go/modules/redis"
 )

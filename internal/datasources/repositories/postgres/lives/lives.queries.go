@@ -8,9 +8,9 @@ import (
 	"time"
 
 	"github.com/lib/pq"
-	"github.com/snykk/go-rest-boilerplate/internal/apperror"
-	livesuc "github.com/snykk/go-rest-boilerplate/internal/business/usecases/lives"
-	"github.com/snykk/go-rest-boilerplate/internal/datasources/records"
+	"github.com/tenSunFree/luma-lang-go/internal/apperror"
+	livesuc "github.com/tenSunFree/luma-lang-go/internal/business/usecases/lives"
+	"github.com/tenSunFree/luma-lang-go/internal/datasources/records"
 )
 
 func (r *postgreLiveRepository) ListLiveCourses(ctx context.Context, statuses []string, userID string) ([]livesuc.LiveCourse, error) {

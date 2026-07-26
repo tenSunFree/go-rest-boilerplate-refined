@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/snykk/go-rest-boilerplate/pkg/audit"
 	"github.com/stretchr/testify/assert"
+	"github.com/tenSunFree/luma-lang-go/pkg/audit"
 )
 
 func TestRecord_EmitsJSONLine(t *testing.T) {

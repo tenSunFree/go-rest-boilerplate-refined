@@ -5,9 +5,9 @@ import (
 	"time"
 
 	"github.com/jmoiron/sqlx"
-	"github.com/snykk/go-rest-boilerplate/internal/constants"
-	"github.com/snykk/go-rest-boilerplate/internal/datasources/records"
-	"github.com/snykk/go-rest-boilerplate/pkg/logger"
+	"github.com/tenSunFree/luma-lang-go/internal/constants"
+	"github.com/tenSunFree/luma-lang-go/internal/datasources/records"
+	"github.com/tenSunFree/luma-lang-go/pkg/logger"
 )
 
 type Seeder interface {

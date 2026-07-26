@@ -1,4 +1,4 @@
-module github.com/snykk/go-rest-boilerplate
+module github.com/tenSunFree/luma-lang-go
 
 go 1.25.0
 

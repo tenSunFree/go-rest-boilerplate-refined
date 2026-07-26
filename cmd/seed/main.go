@@ -2,11 +2,11 @@ package main
 
 import (
 	_ "github.com/lib/pq"
-	"github.com/snykk/go-rest-boilerplate/cmd/seed/seeders"
-	"github.com/snykk/go-rest-boilerplate/internal/config"
-	"github.com/snykk/go-rest-boilerplate/internal/constants"
-	"github.com/snykk/go-rest-boilerplate/internal/datasources/drivers"
-	"github.com/snykk/go-rest-boilerplate/pkg/logger"
+	"github.com/tenSunFree/luma-lang-go/cmd/seed/seeders"
+	"github.com/tenSunFree/luma-lang-go/internal/config"
+	"github.com/tenSunFree/luma-lang-go/internal/constants"
+	"github.com/tenSunFree/luma-lang-go/internal/datasources/drivers"
+	"github.com/tenSunFree/luma-lang-go/pkg/logger"
 )
 
 func init() {

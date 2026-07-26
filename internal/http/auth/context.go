@@ -9,8 +9,8 @@ import (
 	"errors"
 
 	"github.com/gin-gonic/gin"
-	"github.com/snykk/go-rest-boilerplate/internal/constants"
-	"github.com/snykk/go-rest-boilerplate/pkg/jwt"
+	"github.com/tenSunFree/luma-lang-go/internal/constants"
+	"github.com/tenSunFree/luma-lang-go/pkg/jwt"
 )
 
 // CurrentUser is the HTTP-layer view of an authenticated request.

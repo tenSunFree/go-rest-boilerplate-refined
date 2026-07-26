@@ -4,12 +4,12 @@ import (
 	"context"
 	"testing"
 
-	"github.com/snykk/go-rest-boilerplate/internal/business/domain"
-	"github.com/snykk/go-rest-boilerplate/internal/business/usecases/auth"
-	"github.com/snykk/go-rest-boilerplate/internal/business/usecases/users"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
+	"github.com/tenSunFree/luma-lang-go/internal/business/domain"
+	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/auth"
+	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/users"
 )
 
 func TestRegister(t *testing.T) {

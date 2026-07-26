@@ -5,10 +5,10 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/snykk/go-rest-boilerplate/internal/apperror"
-	"github.com/snykk/go-rest-boilerplate/internal/constants"
-	"github.com/snykk/go-rest-boilerplate/pkg/logger"
-	"github.com/snykk/go-rest-boilerplate/pkg/validators"
+	"github.com/tenSunFree/luma-lang-go/internal/apperror"
+	"github.com/tenSunFree/luma-lang-go/internal/constants"
+	"github.com/tenSunFree/luma-lang-go/pkg/logger"
+	"github.com/tenSunFree/luma-lang-go/pkg/validators"
 )
 
 type BaseResponse struct {

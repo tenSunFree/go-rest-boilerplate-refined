@@ -8,13 +8,13 @@ import (
 	"time"
 
 	"github.com/lib/pq"
-	"github.com/snykk/go-rest-boilerplate/internal/config"
-	"github.com/snykk/go-rest-boilerplate/internal/constants"
-	"github.com/snykk/go-rest-boilerplate/internal/datasources/drivers"
-	"github.com/snykk/go-rest-boilerplate/internal/datasources/records"
-	contentspostgres "github.com/snykk/go-rest-boilerplate/internal/datasources/repositories/postgres/contents"
-	"github.com/snykk/go-rest-boilerplate/internal/http/datatransfers/responses"
-	"github.com/snykk/go-rest-boilerplate/pkg/logger"
+	"github.com/tenSunFree/luma-lang-go/internal/config"
+	"github.com/tenSunFree/luma-lang-go/internal/constants"
+	"github.com/tenSunFree/luma-lang-go/internal/datasources/drivers"
+	"github.com/tenSunFree/luma-lang-go/internal/datasources/records"
+	contentspostgres "github.com/tenSunFree/luma-lang-go/internal/datasources/repositories/postgres/contents"
+	"github.com/tenSunFree/luma-lang-go/internal/http/datatransfers/responses"
+	"github.com/tenSunFree/luma-lang-go/pkg/logger"
 )
 
 type ContentImportItem struct {

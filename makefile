@@ -62,10 +62,11 @@ docker-down: ## Stop all Docker Compose services
 pre-push: ci-lint ci-test ci-swag-check ci-build ## Mirror CI checks locally before pushing (lint + test + swag drift + build)
 	@echo "All CI checks passed."
 
-install-hooks: ## Install git pre-push hook (run once after cloning)
-	cp scripts/pre-push .git/hooks/pre-push
-	chmod +x .git/hooks/pre-push
-	@echo "Git hooks installed. pre-push will now run checks before every push."
+install-hooks: ## Install git pre-commit + pre-push hooks (run once after cloning)
+	cp scripts/hooks/pre-commit .git/hooks/pre-commit
+	cp scripts/hooks/pre-push .git/hooks/pre-push
+	chmod +x .git/hooks/pre-commit .git/hooks/pre-push
+	@echo "Git hooks installed. pre-commit and pre-push will now run checks."
 
 ci-test-migration: ## Run migration integration tests (requires Docker)
 	go test -v -count=1 -tags=integration -timeout=120s \

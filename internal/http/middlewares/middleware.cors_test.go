@@ -6,8 +6,8 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
-	"github.com/snykk/go-rest-boilerplate/internal/http/middlewares"
 	"github.com/stretchr/testify/assert"
+	"github.com/tenSunFree/luma-lang-go/internal/http/middlewares"
 )
 
 func TestCORSMiddleware(t *testing.T) {

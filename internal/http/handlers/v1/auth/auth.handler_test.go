@@ -8,16 +8,16 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
-	"github.com/snykk/go-rest-boilerplate/internal/apperror"
-	authuc "github.com/snykk/go-rest-boilerplate/internal/business/usecases/auth"
-	"github.com/snykk/go-rest-boilerplate/internal/constants"
-	authhandler "github.com/snykk/go-rest-boilerplate/internal/http/handlers/v1/auth"
-	"github.com/snykk/go-rest-boilerplate/internal/test/mocks"
-	jwtpkg "github.com/snykk/go-rest-boilerplate/pkg/jwt"
-	"github.com/snykk/go-rest-boilerplate/pkg/validators"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
+	"github.com/tenSunFree/luma-lang-go/internal/apperror"
+	authuc "github.com/tenSunFree/luma-lang-go/internal/business/usecases/auth"
+	"github.com/tenSunFree/luma-lang-go/internal/constants"
+	authhandler "github.com/tenSunFree/luma-lang-go/internal/http/handlers/v1/auth"
+	"github.com/tenSunFree/luma-lang-go/internal/test/mocks"
+	jwtpkg "github.com/tenSunFree/luma-lang-go/pkg/jwt"
+	"github.com/tenSunFree/luma-lang-go/pkg/validators"
 )
 
 func init() {

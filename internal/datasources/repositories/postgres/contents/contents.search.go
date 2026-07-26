@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/snykk/go-rest-boilerplate/internal/datasources/records"
-	repointerface "github.com/snykk/go-rest-boilerplate/internal/datasources/repositories/interface"
-	"github.com/snykk/go-rest-boilerplate/pkg/logger"
+	"github.com/tenSunFree/luma-lang-go/internal/datasources/records"
+	repointerface "github.com/tenSunFree/luma-lang-go/internal/datasources/repositories/interface"
+	"github.com/tenSunFree/luma-lang-go/pkg/logger"
 )
 
 func (r *postgreContentRepository) Search(

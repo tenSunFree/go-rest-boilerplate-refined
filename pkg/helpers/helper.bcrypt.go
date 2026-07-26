@@ -3,7 +3,7 @@ package helpers
 import (
 	"errors"
 
-	"github.com/snykk/go-rest-boilerplate/internal/config"
+	"github.com/tenSunFree/luma-lang-go/internal/config"
 	"golang.org/x/crypto/bcrypt"
 )
 

@@ -4,11 +4,11 @@ import (
 	"context"
 	"flag"
 
-	"github.com/snykk/go-rest-boilerplate/internal/config"
-	"github.com/snykk/go-rest-boilerplate/internal/constants"
-	"github.com/snykk/go-rest-boilerplate/internal/datasources/drivers"
-	"github.com/snykk/go-rest-boilerplate/internal/datasources/migration"
-	"github.com/snykk/go-rest-boilerplate/pkg/logger"
+	"github.com/tenSunFree/luma-lang-go/internal/config"
+	"github.com/tenSunFree/luma-lang-go/internal/constants"
+	"github.com/tenSunFree/luma-lang-go/internal/datasources/drivers"
+	"github.com/tenSunFree/luma-lang-go/internal/datasources/migration"
+	"github.com/tenSunFree/luma-lang-go/pkg/logger"
 )
 
 const migrationsDir = "cmd/migration/migrations"

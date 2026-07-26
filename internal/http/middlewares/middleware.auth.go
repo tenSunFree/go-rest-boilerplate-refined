@@ -4,10 +4,10 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/snykk/go-rest-boilerplate/internal/constants"
-	V1Handler "github.com/snykk/go-rest-boilerplate/internal/http/handlers/v1"
-	"github.com/snykk/go-rest-boilerplate/pkg/jwt"
-	"github.com/snykk/go-rest-boilerplate/pkg/logger"
+	"github.com/tenSunFree/luma-lang-go/internal/constants"
+	V1Handler "github.com/tenSunFree/luma-lang-go/internal/http/handlers/v1"
+	"github.com/tenSunFree/luma-lang-go/pkg/jwt"
+	"github.com/tenSunFree/luma-lang-go/pkg/logger"
 )
 
 type AuthMiddleware struct {

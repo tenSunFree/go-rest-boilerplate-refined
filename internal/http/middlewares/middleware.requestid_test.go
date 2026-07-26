@@ -6,9 +6,9 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
-	"github.com/snykk/go-rest-boilerplate/internal/http/middlewares"
-	"github.com/snykk/go-rest-boilerplate/pkg/logger"
 	"github.com/stretchr/testify/assert"
+	"github.com/tenSunFree/luma-lang-go/internal/http/middlewares"
+	"github.com/tenSunFree/luma-lang-go/pkg/logger"
 )
 
 func init() { gin.SetMode(gin.TestMode) }

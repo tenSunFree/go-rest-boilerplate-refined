@@ -2,8 +2,8 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	livesuc "github.com/snykk/go-rest-boilerplate/internal/business/usecases/lives"
-	liveshandler "github.com/snykk/go-rest-boilerplate/internal/http/handlers/v1/lives"
+	livesuc "github.com/tenSunFree/luma-lang-go/internal/business/usecases/lives"
+	liveshandler "github.com/tenSunFree/luma-lang-go/internal/http/handlers/v1/lives"
 )
 
 type livesRoute struct {

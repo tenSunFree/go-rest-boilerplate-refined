@@ -2,7 +2,7 @@ package postgres
 
 import (
 	"github.com/jmoiron/sqlx"
-	repointerface "github.com/snykk/go-rest-boilerplate/internal/datasources/repositories/interface"
+	repointerface "github.com/tenSunFree/luma-lang-go/internal/datasources/repositories/interface"
 )
 
 type postgreLessonRepository struct {
