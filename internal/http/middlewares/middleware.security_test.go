@@ -6,10 +6,10 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
+	"github.com/stretchr/testify/assert"
 	"github.com/tenSunFree/luma-lang-go/internal/config"
 	"github.com/tenSunFree/luma-lang-go/internal/constants"
 	"github.com/tenSunFree/luma-lang-go/internal/http/middlewares"
-	"github.com/stretchr/testify/assert"
 )
 
 func newSecRouter() *gin.Engine {

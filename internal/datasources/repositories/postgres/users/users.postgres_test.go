@@ -8,13 +8,13 @@ import (
 	"testing"
 	"time"
 
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 	"github.com/tenSunFree/luma-lang-go/internal/apperror"
 	"github.com/tenSunFree/luma-lang-go/internal/business/domain"
 	repointerface "github.com/tenSunFree/luma-lang-go/internal/datasources/repositories/interface"
 	postgresrepo "github.com/tenSunFree/luma-lang-go/internal/datasources/repositories/postgres/users"
 	"github.com/tenSunFree/luma-lang-go/internal/test/testenv"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 )
 
 // fixture builds a UserDomain with sensible defaults for tests.

@@ -8,11 +8,11 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 	"github.com/tenSunFree/luma-lang-go/internal/datasources/migration"
 	"github.com/tenSunFree/luma-lang-go/internal/test/testenv"
 	"github.com/tenSunFree/luma-lang-go/pkg/logger"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 )
 
 // writeMigration is a tiny helper that drops a synthetic migration

@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tenSunFree/luma-lang-go/pkg/clock"
-	"github.com/tenSunFree/luma-lang-go/pkg/jwt"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/tenSunFree/luma-lang-go/pkg/clock"
+	"github.com/tenSunFree/luma-lang-go/pkg/jwt"
 )
 
 const (

@@ -29,13 +29,8 @@ swag: ## Regenerate OpenAPI spec (docs/) from godoc annotations (requires: go in
 	$(GOPATH)/bin/swag init -g cmd/api/main.go --output docs --parseDependency --parseInternal
 
 test-cover: ## Run tests with coverage report
-	mkdir -p coverage/html
-	go test -coverprofile=coverage/coverage.out ./...
-	go tool cover -html=coverage/coverage.out -o coverage/html/index.html
-
-ci-test: ## Run unit tests with race + coverage matching CI
-	mkdir -p coverage
-	go test -race -coverprofile=coverage/coverage.out ./...
+	go test -coverprofile=coverage.out ./...
+	go tool cover -html=coverage.out -o coverage.html
 
 mock: ## Generate mock for an interface (usage: make mock interface=Name dir=path filename=mock.name.go)
 	@echo "Generating mocks for interface $(interface) in directory $(dir)..."
@@ -67,10 +62,11 @@ docker-down: ## Stop all Docker Compose services
 pre-push: ci-lint ci-test ci-swag-check ci-build ## Mirror CI checks locally before pushing (lint + test + swag drift + build)
 	@echo "All CI checks passed."
 
-install-hooks: ## Install git pre-push hook (run once after cloning)
-	cp scripts/pre-push .git/hooks/pre-push
-	chmod +x .git/hooks/pre-push
-	@echo "Git hooks installed. pre-push will now run checks before every push."
+install-hooks: ## Install git pre-commit + pre-push hooks (run once after cloning)
+	cp scripts/hooks/pre-commit .git/hooks/pre-commit
+	cp scripts/hooks/pre-push .git/hooks/pre-push
+	chmod +x .git/hooks/pre-commit .git/hooks/pre-push
+	@echo "Git hooks installed. pre-commit and pre-push will now run checks."
 
 ci-test-migration: ## Run migration integration tests (requires Docker)
 	go test -v -count=1 -tags=integration -timeout=120s \

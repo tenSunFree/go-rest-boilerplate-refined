@@ -8,6 +8,9 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/mock"
+	"github.com/stretchr/testify/require"
 	"github.com/tenSunFree/luma-lang-go/internal/apperror"
 	authuc "github.com/tenSunFree/luma-lang-go/internal/business/usecases/auth"
 	"github.com/tenSunFree/luma-lang-go/internal/constants"
@@ -15,9 +18,6 @@ import (
 	"github.com/tenSunFree/luma-lang-go/internal/test/mocks"
 	jwtpkg "github.com/tenSunFree/luma-lang-go/pkg/jwt"
 	"github.com/tenSunFree/luma-lang-go/pkg/validators"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/mock"
-	"github.com/stretchr/testify/require"
 )
 
 func init() {

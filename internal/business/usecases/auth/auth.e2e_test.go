@@ -7,12 +7,12 @@ import (
 	"errors"
 	"testing"
 
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 	"github.com/tenSunFree/luma-lang-go/internal/apperror"
 	"github.com/tenSunFree/luma-lang-go/internal/business/domain"
 	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/auth"
 	"github.com/tenSunFree/luma-lang-go/internal/test/testenv"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 )
 
 // register puts a fresh user past the register + verify-OTP gate so

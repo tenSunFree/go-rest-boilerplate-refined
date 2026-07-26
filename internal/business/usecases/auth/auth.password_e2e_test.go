@@ -7,11 +7,11 @@ import (
 	"errors"
 	"testing"
 
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 	"github.com/tenSunFree/luma-lang-go/internal/apperror"
 	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/auth"
 	"github.com/tenSunFree/luma-lang-go/internal/test/testenv"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 )
 
 func TestE2E_ChangePassword_OldPasswordRejected(t *testing.T) {

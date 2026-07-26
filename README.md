@@ -120,6 +120,7 @@ Together, the two repositories demonstrate a full-stack mobile architecture cove
 - Formatting validation with `gofmt` / `goimports`
 - Local scripts that mirror CI checks (`scripts/check.sh`, `scripts/check-integration.sh`)
 - Local coverage tooling that mirrors CI's test invocation and renders a browsable HTML report (`scripts/coverage.sh`)
+- Git hooks (`scripts/hooks/pre-commit`, `scripts/hooks/pre-push`) enforcing formatting, static analysis, and secret scanning before commits and pushes
 - Conventional Pull Request workflow with automated AI-assisted review via CodeRabbit
 
 ---
@@ -245,7 +246,7 @@ Requires [`gcov2lcov`](https://github.com/jandelgado/gcov2lcov) plus either `gen
 ## Environment
 
 **Required:** Go 1.25.0, Docker, Docker Compose, Git
-**Optional:** `golangci-lint`, `swag` CLI, `gcov2lcov` + `genhtml`/`lcov-viewer` (for local HTML coverage reports)
+**Optional:** `golangci-lint`, `swag` CLI, `gcov2lcov` + `genhtml`/`lcov-viewer` (for local HTML coverage reports), `gitleaks` (for git hook secret scanning)
 
 **Local runtime services:** PostgreSQL 16, Redis 7, API on port `8080`
 
@@ -290,6 +291,12 @@ go run ./cmd/migration -up     # roll back with -down
 go run ./cmd/seed
 ```
 
+**Install git hooks** (run once after cloning — installs `pre-commit` and `pre-push` hooks that enforce formatting, static analysis, and secret scanning locally):
+
+```bash
+make install-hooks
+```
+
 **Run local checks:**
 
 ```bash
@@ -308,7 +315,7 @@ GitHub Actions validates every Pull Request through automated quality gates:
 - Swagger drift checks
 - Binary compilation
 
-Local check scripts mirror CI behavior so failures can be caught before pushing.
+Local check scripts mirror CI behavior so failures can be caught before pushing. Git hooks installed via `make install-hooks` catch formatting, static analysis, and secret issues even earlier, at commit time.
 
 ---
 
@@ -379,7 +386,9 @@ luma-lang-go
 │   ├── check-integration.sh
 │   ├── check.sh
 │   ├── coverage.sh
-│   └── pre-push
+│   └── hooks
+│       ├── pre-commit
+│       └── pre-push
 ├── go.mod
 ├── go.sum
 ├── makefile

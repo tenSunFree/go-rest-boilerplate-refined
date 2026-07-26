@@ -7,13 +7,13 @@ import (
 	"testing"
 	"time"
 
+	"github.com/stretchr/testify/require"
 	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/auth"
 	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/users"
 	"github.com/tenSunFree/luma-lang-go/internal/config"
 	"github.com/tenSunFree/luma-lang-go/internal/datasources/caches"
 	userspostgres "github.com/tenSunFree/luma-lang-go/internal/datasources/repositories/postgres/users"
 	"github.com/tenSunFree/luma-lang-go/pkg/jwt"
-	"github.com/stretchr/testify/require"
 )
 
 // AuthFixture is the fully-wired auth slice used by end-to-end tests:

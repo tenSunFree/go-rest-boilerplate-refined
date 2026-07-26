@@ -6,13 +6,13 @@ import (
 	"testing"
 	"time"
 
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/mock"
+	"github.com/stretchr/testify/require"
 	"github.com/tenSunFree/luma-lang-go/internal/apperror"
 	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/auth"
 	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/users"
 	"github.com/tenSunFree/luma-lang-go/pkg/jwt"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/mock"
-	"github.com/stretchr/testify/require"
 )
 
 func samplePair() jwt.TokenPair {

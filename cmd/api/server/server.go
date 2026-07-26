@@ -13,6 +13,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jmoiron/sqlx"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/auth"
 	contentsuc "github.com/tenSunFree/luma-lang-go/internal/business/usecases/contents"
 	livesuc "github.com/tenSunFree/luma-lang-go/internal/business/usecases/lives"
@@ -31,8 +33,6 @@ import (
 	"github.com/tenSunFree/luma-lang-go/pkg/logger"
 	"github.com/tenSunFree/luma-lang-go/pkg/mailer"
 	"github.com/tenSunFree/luma-lang-go/pkg/observability"
-	swaggerFiles "github.com/swaggo/files"
-	ginSwagger "github.com/swaggo/gin-swagger"
 	"go.opentelemetry.io/contrib/instrumentation/github.com/gin-gonic/gin/otelgin"
 )
 

@@ -6,6 +6,8 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/mock"
 	"github.com/tenSunFree/luma-lang-go/internal/apperror"
 	"github.com/tenSunFree/luma-lang-go/internal/business/domain"
 	usersuc "github.com/tenSunFree/luma-lang-go/internal/business/usecases/users"
@@ -13,8 +15,6 @@ import (
 	usershandler "github.com/tenSunFree/luma-lang-go/internal/http/handlers/v1/users"
 	"github.com/tenSunFree/luma-lang-go/internal/test/mocks"
 	jwtpkg "github.com/tenSunFree/luma-lang-go/pkg/jwt"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/mock"
 )
 
 func init() { gin.SetMode(gin.TestMode) }

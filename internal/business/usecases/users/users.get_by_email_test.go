@@ -5,12 +5,12 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/tenSunFree/luma-lang-go/internal/apperror"
-	"github.com/tenSunFree/luma-lang-go/internal/business/domain"
-	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/users"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
+	"github.com/tenSunFree/luma-lang-go/internal/apperror"
+	"github.com/tenSunFree/luma-lang-go/internal/business/domain"
+	"github.com/tenSunFree/luma-lang-go/internal/business/usecases/users"
 )
 
 func TestGetByEmail(t *testing.T) {

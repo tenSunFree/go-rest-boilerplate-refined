@@ -4,9 +4,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/tenSunFree/luma-lang-go/internal/business/domain"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/tenSunFree/luma-lang-go/internal/business/domain"
 	"golang.org/x/crypto/bcrypt"
 )
 

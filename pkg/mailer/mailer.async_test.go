@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tenSunFree/luma-lang-go/pkg/mailer"
 	"github.com/stretchr/testify/assert"
+	"github.com/tenSunFree/luma-lang-go/pkg/mailer"
 )
 
 // stubMailer records every SendOTP call and can be configured to fail
