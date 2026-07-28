@@ -70,21 +70,28 @@ jobs:
 
       # Unit tests + coverage.
       # `-covermode=atomic` is required when combined with `-race`.
+      # Output path mirrors scripts/coverage.sh and `make ci-test` (coverage/).
       - name: Run unit tests with coverage
         run: |
+          mkdir -p coverage
           go test \
             -v \
             -race \
             -count=1 \
             -covermode=atomic \
-            -coverprofile=coverage.out \
+            -coverprofile=coverage/coverage.out \
             ./...
+
+      - name: Verify coverage profile
+        run: |
+          test -s coverage/coverage.out
+          go tool cover -func=coverage/coverage.out | tail -1
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./coverage.out
+          files: ./coverage/coverage.out
           flags: unittests
           fail_ci_if_error: false
 
