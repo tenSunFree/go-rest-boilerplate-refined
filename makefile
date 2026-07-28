@@ -1,5 +1,13 @@
 MOCKERY_BIN := $(GOPATH)/bin/mockery
 
+# Coverage output layout — kept in sync with scripts/coverage.sh so that
+# `make ci-test`, `scripts/coverage.sh`, and CI all write the raw profile
+# to the same place. HTML generation itself is left entirely to
+# scripts/coverage.sh (genhtml/lcov-viewer), so its report style is never
+# clobbered by a different tool writing to the same path.
+COVERAGE_DIR     := coverage
+COVERAGE_PROFILE := $(COVERAGE_DIR)/coverage.out
+
 .PHONY: serve dev build tidy test test-cover mock mig-up mig-down seed lint fmt \
 	docker-up docker-down help pre-push install-hooks \
 	ci-lint ci-test ci-test-integration ci-test-migration ci-swag-check ci-build
@@ -28,9 +36,8 @@ test-integration: ## Run integration tests (requires Docker; spins up Postgres +
 swag: ## Regenerate OpenAPI spec (docs/) from godoc annotations (requires: go install github.com/swaggo/swag/cmd/swag@latest)
 	$(GOPATH)/bin/swag init -g cmd/api/main.go --output docs --parseDependency --parseInternal
 
-test-cover: ## Run tests with coverage report
-	go test -coverprofile=coverage.out ./...
-	go tool cover -html=coverage.out -o coverage.html
+test-cover: ## Run tests with coverage + LCOV-style HTML report (delegates to scripts/coverage.sh)
+	bash scripts/coverage.sh
 
 mock: ## Generate mock for an interface (usage: make mock interface=Name dir=path filename=mock.name.go)
 	@echo "Generating mocks for interface $(interface) in directory $(dir)..."
@@ -77,7 +84,8 @@ ci-lint: ## Run golangci-lint matching .github/workflows/ci.yml (auto-installs i
 	golangci-lint run ./...
 
 ci-test: ## Run unit tests with race + coverage matching CI
-	go test -race -coverprofile=coverage.out ./...
+	mkdir -p $(COVERAGE_DIR)
+	go test -race -count=1 -covermode=atomic -coverprofile=$(COVERAGE_PROFILE) ./...
 
 ci-test-integration: ## Run integration tests matching CI (requires Docker)
 	GOFLAGS=-mod=mod go test -tags=integration -race -timeout=10m ./...
